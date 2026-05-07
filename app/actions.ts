@@ -1,6 +1,6 @@
 'use server'
 
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 type ContactState = {
   status: 'idle' | 'success' | 'error'
@@ -25,32 +25,24 @@ export async function submitContact(
     return { status: 'error', message: 'El email no tiene un formato válido.' }
   }
 
-  try {
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_SECURE === 'true',
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    })
+  const resend = new Resend(process.env.RESEND_API_KEY)
 
-    await transporter.sendMail({
-      from: `"Dishflow Landing" <${process.env.SMTP_FROM}>`,
-      replyTo: `"${name}" <${email}>`,
-      to: 'sales@solvifylabs.com',
-      subject: `Nuevo lead Dishflow: ${name}`,
-      html: `
-        <h2>Nuevo contacto desde la landing de Dishflow</h2>
-        <p><strong>Nombre:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        ${instagram ? `<p><strong>Instagram:</strong> ${instagram}</p>` : ''}
-        ${phone ? `<p><strong>Teléfono:</strong> ${phone}</p>` : ''}
-      `,
-    })
-  } catch {
-    return { status: 'error', message: 'No pudimos enviar tu mensaje. Intentá de nuevo.' }
+  const { error } = await resend.emails.send({
+    from: 'Dishflow <noreply@solvifylabs.com>',
+    replyTo: `${name} <${email}>`,
+    to: 'sales@solvifylabs.com',
+    subject: `Nuevo lead: ${name}`,
+    html: `
+      <h2>Nuevo contacto desde la landing de Dishflow</h2>
+      <p><strong>Nombre:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      ${instagram ? `<p><strong>Instagram:</strong> ${instagram}</p>` : ''}
+      ${phone ? `<p><strong>Teléfono:</strong> ${phone}</p>` : ''}
+    `,
+  })
+
+  if (error) {
+    return { status: 'error', message: `Resend error: ${error.name} — ${error.message}` }
   }
 
   return { status: 'success', message: '¡Listo! Te contactamos pronto.' }
