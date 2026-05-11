@@ -13,7 +13,7 @@ export function CTA() {
   return (
     <section className="py-32 bg-[#0e0e10] relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-        <div className="w-[500px] h-[300px] bg-[#E8A049]/10 rounded-full blur-[100px]" />
+        <div className="w-[500px] h-[300px] bg-[#FFD700]/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
@@ -24,25 +24,25 @@ export function CTA() {
           transition={{ duration: 0.7 }}
         >
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05] mb-6">
-            ¿Querés ver Dishflow{" "}
+            ¿Querés ver Lubricentro{" "}
             <span
               style={{
-                background: "linear-gradient(135deg, #fafafa 0%, #E8A049 60%, #c4853a 100%)",
+                background: "linear-gradient(135deg, #fafafa 0%, #FFD700 60%, #C9A000 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
               }}
             >
-              en tu local?
+              en tu taller?
             </span>
           </h2>
           <p className="text-[#fafafa]/50 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-            Dejanos tus datos y te contactamos para mostrarte cómo puede transformar la operación de tu local.
+            Dejanos tus datos y te contactamos para mostrarte cómo puede transformar la operación de tu taller.
           </p>
 
           {state.status === "success" ? (
-            <div className="bg-[#E8A049]/10 border border-[#E8A049]/30 rounded-xl px-8 py-10 max-w-md mx-auto">
-              <p className="text-[#E8A049] font-semibold text-lg">{state.message}</p>
+            <div className="bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-xl px-8 py-10 max-w-md mx-auto">
+              <p className="text-[#FFD700] font-semibold text-lg">{state.message}</p>
               <p className="text-[#fafafa]/40 text-sm mt-2">Revisá tu bandeja de entrada.</p>
             </div>
           ) : (
@@ -53,7 +53,7 @@ export function CTA() {
                 placeholder="Nombre completo"
                 required
                 disabled={pending}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#fafafa]/30 text-sm focus:outline-none focus:border-[#E8A049]/50 transition-colors disabled:opacity-50"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#fafafa]/30 text-sm focus:outline-none focus:border-[#FFD700]/50 transition-colors disabled:opacity-50"
               />
               <input
                 type="email"
@@ -61,21 +61,21 @@ export function CTA() {
                 placeholder="Email"
                 required
                 disabled={pending}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#fafafa]/30 text-sm focus:outline-none focus:border-[#E8A049]/50 transition-colors disabled:opacity-50"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#fafafa]/30 text-sm focus:outline-none focus:border-[#FFD700]/50 transition-colors disabled:opacity-50"
               />
               <input
                 type="text"
                 name="instagram"
-                placeholder="Instagram (@tulocal)"
+                placeholder="Instagram (@tutaller)"
                 disabled={pending}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#fafafa]/30 text-sm focus:outline-none focus:border-[#E8A049]/50 transition-colors disabled:opacity-50"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#fafafa]/30 text-sm focus:outline-none focus:border-[#FFD700]/50 transition-colors disabled:opacity-50"
               />
               <input
                 type="tel"
                 name="phone"
                 placeholder="Teléfono / WhatsApp"
                 disabled={pending}
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#fafafa]/30 text-sm focus:outline-none focus:border-[#E8A049]/50 transition-colors disabled:opacity-50"
+                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#fafafa]/30 text-sm focus:outline-none focus:border-[#FFD700]/50 transition-colors disabled:opacity-50"
               />
 
               {state.status === "error" && (
@@ -85,7 +85,7 @@ export function CTA() {
               <button
                 type="submit"
                 disabled={pending}
-                className="group inline-flex items-center justify-center gap-2 bg-[#E8A049] text-[#0e0e10] font-bold px-8 py-4 rounded-lg text-[15px] transition-all duration-200 hover:bg-[#f0b060] hover:shadow-[0_8px_40px_rgba(232,160,73,0.4)] hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                className="group inline-flex items-center justify-center gap-2 bg-[#FFD700] text-[#0e0e10] font-bold px-8 py-4 rounded-lg text-[15px] transition-all duration-200 hover:bg-[#FFE033] hover:shadow-[0_8px_40px_rgba(255,215,0,0.4)] hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
                 {pending ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -106,12 +106,10 @@ export function CTA() {
           </div>
           <div className="mt-4 max-w-md mx-auto">
             <a
-              href="https://dishflow-demo.solvifylabs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative w-full overflow-hidden inline-flex items-center justify-center gap-2 border border-white/15 text-[#fafafa]/70 font-semibold px-8 py-4 rounded-lg text-[15px] transition-colors duration-300 hover:border-[#E8A049] hover:text-[#0e0e10] hover:-translate-y-0.5"
+              href="#"
+              className="group relative w-full overflow-hidden inline-flex items-center justify-center gap-2 border border-white/15 text-[#fafafa]/70 font-semibold px-8 py-4 rounded-lg text-[15px] transition-colors duration-300 hover:border-[#FFD700] hover:text-[#0e0e10] hover:-translate-y-0.5"
             >
-              <span className="absolute inset-0 bg-[#E8A049] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              <span className="absolute inset-0 bg-[#FFD700] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               <span className="relative">Ver demo completo</span>
               <ArrowRight className="relative w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>

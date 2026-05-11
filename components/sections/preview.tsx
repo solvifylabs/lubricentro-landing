@@ -7,33 +7,43 @@ import Image from "next/image";
 const screens = [
   {
     label: "Dashboard",
-    description: "Vista general con todos los pedidos activos, estados y montos en tiempo real.",
+    description: "Vista general con KPIs del día, servicios recientes, ventas y alertas de stock.",
     file: "/screenshots/dashboard.png",
   },
   {
-    label: "Wizard de pedido",
-    description: "Flujo guiado paso a paso para tomar pedidos sin errores ni confusiones.",
-    file: "/screenshots/wizard.png",
+    label: "Servicios",
+    description: "Órdenes de trabajo con detalle de repuestos, kilometraje y próximo service.",
+    file: "/screenshots/servicios.png",
   },
   {
-    label: "Historial",
-    description: "Todos los pedidos cerrados con detalle, montos y métodos de pago.",
-    file: "/screenshots/historial.png",
-  },
-  {
-    label: "Menú",
-    description: "Gestioná productos, categorías, precios y disponibilidad desde un solo lugar.",
-    file: "/screenshots/menu.png",
-  },
-  {
-    label: "Rendimiento",
-    description: "Métricas de ventas, ticket promedio y productos más pedidos del período.",
-    file: "/screenshots/rendimiento.png",
+    label: "Vehículos",
+    description: "Registro de vehículos con historial de servicios y próximos mantenimientos.",
+    file: "/screenshots/vehiculos.png",
   },
   {
     label: "Clientes",
-    description: "Registro de clientes con historial de pedidos, direcciones y preferencias.",
+    description: "CRM de clientes con todos sus vehículos e historial completo de atenciones.",
     file: "/screenshots/clientes.png",
+  },
+  {
+    label: "Stock",
+    description: "Inventario de repuestos con alertas de bajo stock y movimientos registrados.",
+    file: "/screenshots/stock.png",
+  },
+  {
+    label: "Ventas",
+    description: "Registro de ventas con descuentos, métodos de pago y comprobantes.",
+    file: "/screenshots/ventas.png",
+  },
+  {
+    label: "Lava Auto",
+    description: "Turnos, sesiones y precios del servicio de lavado en tres niveles.",
+    file: "/screenshots/lava-auto.png",
+  },
+  {
+    label: "Reportes",
+    description: "Gráficos de ventas por período y métricas clave del negocio.",
+    file: "/screenshots/reportes.png",
   },
 ];
 
@@ -57,14 +67,14 @@ export function Preview() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#E8A049] mb-4">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#FFD700] mb-4">
             Interfaz
           </p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">
-            Diseñado para la velocidad
+            Diseñado para la velocidad del taller
           </h2>
           <p className="text-[#fafafa]/50 text-lg max-w-xl mx-auto">
-            Oscuro, limpio y sin distracciones. Pensado para el mostrador, con luz baja y ritmo alto.
+            Oscuro, limpio y sin distracciones. Todo lo que necesitás a un click, sin curva de aprendizaje.
           </p>
         </motion.div>
 
@@ -93,7 +103,7 @@ export function Preview() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute inset-0 rounded-full bg-[#E8A049]/15 border border-[#E8A049]/25"
+                    className="absolute inset-0 rounded-full bg-[#FFD700]/15 border border-[#FFD700]/25"
                   />
                 )}
               </AnimatePresence>
@@ -110,7 +120,7 @@ export function Preview() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="rounded-2xl border border-white/[0.07] bg-[#111113] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.5)]"
         >
-          {/* Window chrome — decorativo */}
+          {/* Window chrome */}
           <div className="flex items-center gap-1.5 px-5 py-3.5 border-b border-white/[0.05] bg-[#0e0e10]/60">
             <div className="w-3 h-3 rounded-full bg-white/[0.12]" />
             <div className="w-3 h-3 rounded-full bg-white/[0.12]" />

@@ -5,21 +5,21 @@ import { motion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Recibís el pedido",
+    title: "Registrás el vehículo",
     description:
-      "El cliente pide en mostrador o por delivery. Abrís un nuevo pedido en el dashboard y cargás los datos en segundos.",
+      "El cliente llega, buscás o creás su perfil. El historial de vehículos y servicios anteriores está a un click.",
   },
   {
     number: "02",
-    title: "Armás el pedido",
+    title: "Creás la orden",
     description:
-      "Usás el wizard para agregar burgers, combos y extras. El precio se calcula solo, sin errores manuales.",
+      "Agregás los servicios, los repuestos utilizados y el kilometraje. El sistema calcula el total automáticamente.",
   },
   {
     number: "03",
-    title: "Confirmás e imprimís",
+    title: "Cerrás la venta",
     description:
-      "Con un click el pedido queda registrado y el ticket sale directo a la impresora de cocina. Sin pasos extra.",
+      "Con un click generás la venta, aplicás descuentos si hay, y el stock se descuenta solo.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#E8A049] mb-4">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#FFD700] mb-4">
             Cómo funciona
           </p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">
@@ -46,8 +46,7 @@ export function HowItWorks() {
         </motion.div>
 
         <div className="relative">
-          {/* Connector line */}
-          <div className="absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#E8A049]/20 to-transparent hidden md:block" />
+          <div className="absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFD700]/20 to-transparent hidden md:block" />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {steps.map((step, i) => (
@@ -59,8 +58,8 @@ export function HowItWorks() {
                 transition={{ duration: 0.5, delay: i * 0.15 }}
                 className="flex flex-col gap-5"
               >
-                <div className="relative w-16 h-16 rounded-2xl bg-[#0e0e10] border border-[#E8A049]/20 flex items-center justify-center">
-                  <span className="text-xl font-bold text-[#E8A049]">{step.number}</span>
+                <div className="relative w-16 h-16 rounded-2xl bg-[#0e0e10] border border-[#FFD700]/20 flex items-center justify-center">
+                  <span className="text-xl font-bold text-[#FFD700]">{step.number}</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2 tracking-tight">{step.title}</h3>

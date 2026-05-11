@@ -13,7 +13,7 @@ export function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <Image src="/logo.webp" alt="Dishflow" width={50} height={50} />
+          <Image src="/logo.webp" alt="Lubricentro" width={50} height={50} />
         </div>
 
         <div className="flex items-center gap-4">
@@ -21,7 +21,7 @@ export function Navbar() {
             href="https://www.instagram.com/solvifylabs/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#fafafa]/50 hover:text-[#E8A049] transition-colors"
+            className="text-[#fafafa]/50 hover:text-[#FFD700] transition-colors"
             aria-label="Instagram"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -31,10 +31,8 @@ export function Navbar() {
             </svg>
           </a>
           <a
-            href="https://dishflow-demo.solvifylabs.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-[#fafafa]/70 hover:text-[#E8A049] transition-colors"
+            href="#"
+            className="text-sm font-medium text-[#fafafa]/70 hover:text-[#FFD700] transition-colors"
           >
             Ver demo
           </a>

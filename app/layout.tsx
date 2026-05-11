@@ -8,23 +8,23 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dishflow.solvifylabs.com"),
+  metadataBase: new URL("https://lubricentro.solvifylabs.com"),
 
   title: {
-    default: "Dishflow — El sistema que tu cocina necesitaba",
-    template: "%s | Dishflow",
+    default: "Lubricentro — El sistema que tu taller necesitaba",
+    template: "%s | Lubricentro",
   },
   description:
-    "Gestioná pedidos, armá combos, imprimí tickets y controlá delivery desde un solo dashboard. Diseñado para el ritmo de la cocina argentina.",
+    "Gestioná clientes, vehículos, servicios, stock, ventas y lava-auto desde un solo sistema. Diseñado para talleres y lubricentros.",
 
   keywords: [
-    "sistema de gestión gastronómica",
-    "software para restaurantes",
-    "gestión de pedidos",
-    "sistema de delivery",
-    "cocina en tiempo real",
-    "dashboard restaurante",
-    "dishflow",
+    "sistema de gestión para talleres",
+    "software para lubricentros",
+    "gestión de servicios automotor",
+    "control de stock repuestos",
+    "CRM vehiculos",
+    "dashboard taller mecánico",
+    "lubricentro",
   ],
 
   authors: [{ name: "Solvify Labs", url: "https://solvifylabs.com" }],
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   publisher: "Solvify Labs",
 
   alternates: {
-    canonical: "https://dishflow.solvifylabs.com",
+    canonical: "https://lubricentro.solvifylabs.com",
   },
 
   robots: {
@@ -49,26 +49,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "https://dishflow.solvifylabs.com",
-    siteName: "Dishflow",
-    title: "Dishflow — El sistema que tu cocina necesitaba",
+    url: "https://lubricentro.solvifylabs.com",
+    siteName: "Lubricentro",
+    title: "Lubricentro — El sistema que tu taller necesitaba",
     description:
-      "Gestioná pedidos, armá combos, imprimí tickets y controlá delivery desde un solo dashboard.",
+      "Gestioná clientes, vehículos, servicios, stock, ventas y lava-auto desde un solo sistema.",
     images: [
       {
         url: "/screenshots/dashboard.png",
         width: 1200,
         height: 630,
-        alt: "Dashboard de Dishflow — Sistema de gestión gastronómica",
+        alt: "Dashboard de Lubricentro — Sistema de gestión para talleres",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Dishflow — El sistema que tu cocina necesitaba",
+    title: "Lubricentro — El sistema que tu taller necesitaba",
     description:
-      "Gestioná pedidos, armá combos, imprimí tickets y controlá delivery desde un solo dashboard.",
+      "Gestioná clientes, vehículos, servicios, stock, ventas y lava-auto desde un solo sistema.",
     images: ["/screenshots/dashboard.png"],
   },
 
@@ -93,12 +93,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "Dishflow",
+              name: "Lubricentro",
               applicationCategory: "BusinessApplication",
               operatingSystem: "Web",
               description:
-                "Sistema de gestión para locales gastronómicos. Pedidos, combos, tickets y delivery desde un dashboard.",
-              url: "https://dishflow.solvifylabs.com",
+                "Sistema de gestión para talleres y lubricentros. Clientes, vehículos, servicios, stock y ventas desde un dashboard.",
+              url: "https://lubricentro.solvifylabs.com",
               publisher: {
                 "@type": "Organization",
                 name: "Solvify Labs",

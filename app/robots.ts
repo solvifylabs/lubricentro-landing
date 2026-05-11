@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://dishflow.solvifylabs.com/sitemap.xml",
+    sitemap: "https://lubricentro.solvifylabs.com/sitemap.xml",
   };
 }

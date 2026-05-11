@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-white/5 bg-[#0e0e10] py-10">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2.5">
-          <Image src="/logo.webp" alt="Solvify Burger" width={50} height={50} />
+          <Image src="/logo.webp" alt="Lubricentro" width={50} height={50} />
         </div>
         <p className="text-xs text-[#fafafa]/30">
           www.solvifylabs.com · {new Date().getFullYear()}
@@ -15,7 +15,7 @@ export function Footer() {
           href="https://www.instagram.com/solvifylabs/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#fafafa]/30 hover:text-[#E8A049] transition-colors"
+          className="text-[#fafafa]/30 hover:text-[#FFD700] transition-colors"
           aria-label="Instagram"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

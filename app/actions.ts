@@ -28,12 +28,12 @@ export async function submitContact(
   const resend = new Resend(process.env.RESEND_API_KEY)
 
   const { error } = await resend.emails.send({
-    from: 'Dishflow <noreply@solvifylabs.com>',
+    from: 'Lubricentro <noreply@solvifylabs.com>',
     replyTo: `${name} <${email}>`,
     to: 'sales@solvifylabs.com',
     subject: `Nuevo lead: ${name}`,
     html: `
-      <h2>Nuevo contacto desde la landing de Dishflow</h2>
+      <h2>Nuevo contacto desde la landing de Lubricentro</h2>
       <p><strong>Nombre:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       ${instagram ? `<p><strong>Instagram:</strong> ${instagram}</p>` : ''}

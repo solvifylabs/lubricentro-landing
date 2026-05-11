@@ -14,7 +14,7 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #E8A049 #0e0e10;
+  scrollbar-color: #FFD700 #0e0e10;
 }
 
 body {
@@ -25,6 +25,6 @@ body {
 }
 
 ::selection {
-  background: rgba(232, 160, 73, 0.3);
+  background: rgba(255, 215, 0, 0.3);
   color: #fafafa;
 }

@@ -2,56 +2,56 @@
 
 import { motion } from "framer-motion";
 import {
-  ClipboardList,
-  Layers,
-  Printer,
+  Users,
+  Wrench,
+  Droplets,
+  Package,
+  ShoppingCart,
   Truck,
-  CreditCard,
   BarChart3,
-  Zap,
   ShieldCheck,
 } from "lucide-react";
 
 const features = [
   {
-    icon: ClipboardList,
-    title: "Wizard de pedidos",
-    description: "Tomá pedidos con un flujo guiado: burgers, combos, sides y extras. Sin errores, sin confusiones.",
+    icon: Users,
+    title: "Clientes y vehículos",
+    description: "Perfil completo de cada cliente con todos sus vehículos, historial de servicios y próximos mantenimientos.",
   },
   {
-    icon: Layers,
-    title: "Combos personalizables",
-    description: "Armá combos con múltiples burgers, papas, bebidas y extras. Precio calculado en tiempo real.",
+    icon: Wrench,
+    title: "Órdenes de servicio",
+    description: "Creá órdenes de trabajo, registrá repuestos usados, kilometraje y programá el próximo service en segundos.",
   },
   {
-    icon: Printer,
-    title: "Impresión térmica",
-    description: "Ticket impreso automáticamente en la cocina al confirmar el pedido. Formato claro.",
+    icon: Droplets,
+    title: "Lava Auto integrado",
+    description: "Turnos, sesiones y precios en 3 niveles (interior, exterior, completo). Todo dentro del mismo sistema.",
+  },
+  {
+    icon: Package,
+    title: "Stock e inventario",
+    description: "Controlá repuestos, aceites y consumibles con alertas automáticas de bajo stock por producto.",
+  },
+  {
+    icon: ShoppingCart,
+    title: "Ventas y facturación",
+    description: "Registrá ventas con descuentos por monto o porcentaje, múltiples métodos de pago y comprobantes al instante.",
   },
   {
     icon: Truck,
-    title: "Delivery & Retiro",
-    description: "Gestioná pedidos para envío y retiro. Dirección, hora estimada y observaciones incluidas.",
-  },
-  {
-    icon: CreditCard,
-    title: "Métodos de pago",
-    description: "Registrá efectivo, transferencia o tarjeta en cada pedido. Sin fricciones en el cierre.",
+    title: "Proveedores y compras",
+    description: "Gestioná tus proveedores, historial de compras y el catálogo de productos por proveedor.",
   },
   {
     icon: BarChart3,
-    title: "Dashboard en vivo",
-    description: "Vista general de todos los pedidos activos con estados, montos y filtros.",
-  },
-  {
-    icon: Zap,
-    title: "Descuentos y promos",
-    description: "Aplicá descuentos por porcentaje o monto fijo. Se refleja en el ticket y en el total.",
+    title: "Dashboard en tiempo real",
+    description: "KPIs del día, servicios recientes, ventas del período y alertas de stock en un solo vistazo.",
   },
   {
     icon: ShieldCheck,
-    title: "Sin dependencias",
-    description: "Funciona en tu red local. No necesitás internet para imprimir ni para tomar pedidos.",
+    title: "Sin dependencias externas",
+    description: "Funciona en tu red local. No necesitás internet para operar ni para registrar servicios.",
   },
 ];
 
@@ -68,15 +68,15 @@ export function Features() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="text-xs font-semibold tracking-widest uppercase text-[#E8A049] mb-4">
+          <p className="text-xs font-semibold tracking-widest uppercase text-[#FFD700] mb-4">
             Características
           </p>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-              Todo lo que tu local<br className="hidden md:block" /> necesita
+              Todo lo que tu taller<br className="hidden md:block" /> necesita
             </h2>
             <p className="text-[#fafafa]/45 text-base max-w-xs leading-relaxed md:text-right shrink-0">
-              Desde el primer click<br className="hidden md:block" /> hasta el ticket impreso.
+              Desde el primer cliente<br className="hidden md:block" /> hasta el último repuesto.
             </p>
           </div>
         </motion.div>
@@ -92,20 +92,17 @@ export function Features() {
               transition={{ duration: 0.5, delay: i * 0.04 }}
               className="group grid grid-cols-1 md:grid-cols-[40px_220px_1fr] gap-3 md:gap-8 py-6 -mx-4 px-4 rounded-xl hover:bg-white/[0.02] transition-colors duration-200 cursor-default"
             >
-              {/* Number */}
               <span className="text-xs font-mono text-[#fafafa]/20 md:pt-1">
                 {String(i + 1).padStart(2, "0")}
               </span>
 
-              {/* Icon + Title */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-[#E8A049]/10 flex items-center justify-center shrink-0 group-hover:bg-[#E8A049]/15 transition-colors duration-200">
-                  <f.icon className="w-4 h-4 text-[#E8A049]" />
+                <div className="w-8 h-8 rounded-lg bg-[#FFD700]/10 flex items-center justify-center shrink-0 group-hover:bg-[#FFD700]/15 transition-colors duration-200">
+                  <f.icon className="w-4 h-4 text-[#FFD700]" />
                 </div>
                 <h3 className="font-semibold text-[14px] tracking-tight">{f.title}</h3>
               </div>
 
-              {/* Description */}
               <p className="text-sm text-[#fafafa]/40 leading-relaxed md:pt-0.5">
                 {f.description}
               </p>
